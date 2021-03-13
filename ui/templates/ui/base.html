@@ -1,0 +1,318 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ACCA Qualified Accountant</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'ui/base.css' %}"/>
+</head>
+<body>
+
+<!-- Start Header -->
+<header>
+    <div class="container">
+        <div class="logo">
+            <a href="">P<span>.</span>F<span>.</span></a>
+        </div>
+        <div class="trigger-main">
+            <a href="javascript:void(0);" class="ham-burger">
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- End Header -->
+
+<!-- Start Home -->
+<section class="home" id="home">
+    <div class="container">
+        <div class="home-text">
+            <h1>Hi, I am Priscila Ferreira</h1>
+            <h3>ACCA Qualified Accountant</h3>
+        </div>
+    </div>
+</section>
+<!-- End Home -->
+
+<!-- Start About -->
+<section class="about" id="about">
+    <div class="container">
+        <h2 class="title">About Me</h2>
+        <div class="about-content">
+            <div class="img">
+                <img src="{% static 'ui/about-me.jpg' %}" alt="me">
+            </div>
+            <div class="description">
+                <h4>Hi, I am Priscila Ferreira</h4>
+                <h5>ACCA Qualified Accountant based in Dublin</h5>
+                <p>Lorem ipsum dolor sit amet, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+                <p>Lorem ipsum dolor sit amet, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.Lorem ipsum dolor sit amet, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.Lorem ipsum dolor sit amet, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+                <p>
+                    <a href="{% static 'ui/my.pdf' %}" target="blank"><button type="button" class="btn-light">Donwload CV</button></a>
+                    <a href="#contact"><button type="button" class="btn-light">Get In Touch</button></a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End About -->
+
+<!-- Start Service -->
+<section class="services" id="services">
+    <div class="container">
+        <h2 class="title">Services</h2>
+        <div class="services-content">
+            <div class="card">
+                <div class="box">
+                    <div class="icon">
+                        <span class="fa fa-laptop"></span>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Lorem ipsum dolor sit amet, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="icon">
+                        <span class="fa fa-mobile"></span>
+                    </div>
+                    <h3>Responsive Design</h3>
+                    <p>Lorem ipsum dolor sit amet, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="icon">
+                        <span class="fa fa-pencil"></span>
+                    </div>
+                    <h3>Creative Design</h3>
+                    <p>Lorem ipsum dolor sit amet, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="icon">
+                        <span class="fa fa-code"></span>
+                    </div>
+                    <h3>Clean Code</h3>
+                    <p>Lorem ipsum dolor sit amet, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="icon">
+                        <span class="fa fa-support"></span>
+                    </div>
+                    <h3>Fast Support</h3>
+                    <p>Lorem ipsum dolor sit amet, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <div class="icon">
+                        <span class="fa fa-rocket"></span>
+                    </div>
+                    <h3>Branding Identity</h3>
+                    <p>Lorem ipsum dolor sit amet, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Service -->
+
+<!-- Start Skills -->
+<section class="skills" id="skills">
+    <div class="container">
+        <h2 class="title">Skills</h2>
+        <div class="skills-content">
+            <div class="card">
+                <label>Html5</label>
+                <div class="progress" data-text="80%">
+                    <div class="inner"  style="width: 80%">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <label>Css</label>
+                <div class="progress" data-text="60%">
+                    <div class="inner"  style="width: 60%">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <label>Javascript</label>
+                <div class="progress" data-text="90%">
+                    <div class="inner"  style="width: 90%">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <label>Angular</label>
+                <div class="progress" data-text="40%">
+                    <div class="inner"  style="width: 40%">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <label>Php</label>
+                <div class="progress" data-text="56%">
+                    <div class="inner"  style="width:56%">
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <label>React</label>
+                <div class="progress" data-text="78%">
+                    <div class="inner" style="width: 78%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Skills -->
+
+<!-- Start Blog -->
+<section class="blog" id="blog">
+    <div class="container">
+        <h2 class="title">Blog</h2>
+        <div class="blog-content">
+            <div class="card">
+                <div class="box">
+                    <img src="{% static 'ui/blog1.jpg' %}" alt="blog" />
+                    <h4>2000-2020 </h4>
+                    <h3>Classic Pianist</h3>
+                    <p>I've always been passionate about music, so I founded a band called F.D.G. with my friends. We used to play authorial music with a strong influence of classic rock. At that moment, I was the Solo Guitar inspired by legends like Stevie Ray Vaughan and Steve Vai.</p>
+                    <p><button type="button" class="btn-light">Read More</button></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <img src="{% static 'ui/blog2.jpg' %}" alt="blog" />
+                    <h4>2015-2016 </h4>
+                    <h3>Founder & Conductor</h3>
+                    <p>As a music lover, I wasn't happy to play just one instrument, and after the invitation of another friend, I joined band Mórula assuming the post of Drummer, always with a lot of energy and vibrancy influenced by my references Dave Grohl and John Bonham.</p>
+                    <p><button type="button" class="btn-light">Read More</button></p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="box">
+                    <img src="{% static 'ui/blog3.jpg' %}" alt="blog" />
+                    <h4>2018-2020 </h4>
+                    <h3>Volunteer at CCC</h3>
+                    <p>After moving to Ireland, I was looking for a community to not only manifest my faith but where I could also share my gifts. So I found Christ City Church, a community with which I can strengthen ties and serve by controlling the audio table during our Sunday services.</p>
+                    <p><button type="button" class="btn-light">Read More</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Blog -->
+
+<!-- Start Contact -->
+<section class="contact" id="contact">
+    <div class="container">
+        <h2 class="title">Contact Me</h2>
+        <div class="contact-content">
+            <form class="contact-form padd-15" method="post" action="contact-form-handle.php">
+                <input name="name" type="text" class="form-control" placeholder="Name*">
+                <input name="email" type="text" class="form-control" placeholder="Email*">
+                <input name="subject" type="text" class="form-control" placeholder="Subject*">
+                <textarea name="message" class="form-control" placeholder="Message*"></textarea>
+                <button onclick="alert('Thanks For Your Message')" class="btn-bg">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- End Contact -->
+
+<!-- Start Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="box">
+                <div class="icon">
+                    <span class="fa fa-phone"></span>
+                </div>
+                <h4>Phone</h4>
+                <p>+353 083 8274597</p>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <span class="fa fa-envelope"></span>
+                </div>
+                <h4>Email</h4>
+                <p>priscilaferreira.acca@gmail.com</p>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <span class="fa fa-map-marker"></span>
+                </div>
+                <h4>Location</h4>
+                <p>Dublin - Ireland</p>
+            </div>
+        </div>
+        <div class="social-links">
+            <ul>
+                <li><a href="https://www.linkedin.com/in/lucas-ferreira-27054757/" target="blank"><span class="fa fa-linkedin"></span></a></li>
+                <li><a href="https://www.linkedin.com/in/lucas-ferreira-27054757/" target="blank"><span class="fa fa-skype"></span></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+
+<!-- jquery code -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		var bottom=$("header").outerHeight();
+		var header=$("header").offset().top + bottom;
+     $(window).scroll(function(){
+          // header fixed only when window width greater than 991px
+         if($(window).width()>991){
+     	if($(window).scrollTop()>=header){
+     		$("header").addClass("sticky")
+     	}
+     	else{
+     	 $("header").removeClass("sticky")
+     	}
+     }
+     })
+
+     // navbar active link
+
+     $(".navbar ul li a").click(function(){
+     	 $(".navbar ul li a").removeClass("active")
+     	 $(this).addClass("active");
+     })
+
+    $(".ham-burger").click(function(){
+    	$(this).toggleClass("active")
+    	$(".navbar").toggleClass("open");
+    })
+
+	})
+
+</script>
+
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,214 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio de Mark</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'ui/css/style.css' %}"/>
+    <link rel="icon" href="{% static 'ui/images/favicon.ico' %}">
+</head>
+<body>
+
+<!-- Start Header -->
+<header>
+    <div class="container">
+        <div class="logo">
+            <a href="">&lt<span>dev</span>-<span>mark</span>&gt</a>
+        </div>
+        <div class="trigger-main">
+            <a href="javascript:void(0);" class="ham-burger">
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#blog">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- End Header -->
+
+<!-- Start Home -->
+<section class="home" id="home">
+    <div class="container">
+        <div class="home-text">
+            <h1>Hi, My Name Is Mark Christian Albinto</h1>
+            <h3><p class="typewrite" data-period="2000"
+                   data-type='[ "I am a Full-Stack Web Developer!", "I Create Responsive Websites!", "I Love Python", "I Love Django!" ]'>
+                <span class="wrap"></span>
+            </p></h3>
+        </div>
+    </div>
+</section>
+<!-- End Home -->
+
+<!-- Start About -->
+<section class="about" id="about">
+    <div class="container">
+        <h2 class="title">About Me</h2>
+        <div class="about-content">
+            <div class="img">
+                <img src="{% static 'ui/images/profile.jpg' %}" alt="me">
+            </div>
+            <div class="description">
+                <h4>Hi, I am Mark Christian Albinto</h4>
+                <h5>Full-Stack Web Developer based in Dublin</h5>
+                <p>Lorem ipsum dolor sit amet, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
+                <p>Lorem ipsum dolor sit amet, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.Lorem ipsum dolor sit amet,
+                    ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi. Ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi.Lorem ipsum dolor sit amet, ut enim ad minim veniam,
+                    quis nostrud exercitation ullamco laboris nisi. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi.</p>
+                <p>
+                    <a href="#" target="blank">
+                        <button type="button" class="btn-light">Download CV</button>
+                    </a>
+                    <a href="#contact">
+                        <button type="button" class="btn-light">Get In Touch</button>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End About -->
+
+<!-- Start Service -->
+<section class="services" id="services">
+    <div class="container">
+        <h2 class="title">Services</h2>
+        <div class="services-content">
+            {% for service in services %}
+            <div class="card">
+                <div class="box">
+                    <div class="icon">
+                        <span class="{{ service.icon }}"></span>
+                    </div>
+                    <h3>{{ service.name }}</h3>
+                    <p>{{ service.description }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- End Service -->
+
+<!-- Start Skills -->
+<section class="skills" id="skills">
+    <div class="container">
+        <h2 class="title">Skills</h2>
+        <div class="skills-content">
+            {% for skill in skills %}
+            <div class="card">
+                <label>{{ skill.name }}</label>
+                <div class="progress" data-text="{{ skill.percentage }}%">
+                    <div class="inner" style="width: {{ skill.percentage }}%">
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- End Skills -->
+
+<!-- Start Blog -->
+<section class="blog" id="blog">
+    <div class="container">
+        <h2 class="title">Projects</h2>
+        <div class="blog-content">
+            {% for project in projects %}
+            <div class="card">
+                <div class="box">
+                    <img class="project_image" height="225" src="{{ project.image.url }}" alt="blog"/>
+                    <h4>{{ project.technology }}</h4>
+                    <h3>{{ project.title }}</h3>
+                    <p>{{ project.description }}</p>
+                    <p>
+                        <button type="button" class="btn-light">Read More</button>
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+<!-- End Blog -->
+
+<!-- Start Contact -->
+<section class="contact" id="contact">
+    <div class="container">
+        <h2 class="title">Contact Me</h2>
+        <div class="contact-content">
+            <form class="contact-form padd-15" method="POST" action="">
+                {% csrf_token %}
+                <input name="name" type="text" class="form-control" placeholder="Name*" required>
+                <input name="email" type="email" class="form-control" placeholder="Email*" required>
+                <input name="subject" type="text" class="form-control" placeholder="Subject*" required>
+                <textarea name="message" class="form-control" placeholder="Message"></textarea>
+                <button class="btn-bg">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- End Contact -->
+
+<!-- Start Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="box">
+                <div class="icon">
+                    <span class="fa fa-phone"></span>
+                </div>
+                <h4>Phone</h4>
+                <p>+353 833 994071</p>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <span class="fa fa-envelope"></span>
+                </div>
+                <h4>Email</h4>
+                <p>markchristianalbinto@yahoo.com</p>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <span class="fa fa-map-marker"></span>
+                </div>
+                <h4>Location</h4>
+                <p>Dublin - Ireland</p>
+            </div>
+        </div>
+        <div class="social-links">
+            <ul>
+                <li><a href="" target="blank"><span
+                        class="fa fa-linkedin"></span></a></li>
+                <li><a href="" target="blank"><span
+                        class="fa fa-skype"></span></a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+<!-- End Footer -->
+
+<!-- jquery code -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="{% static 'ui/js/script.js' %}"></script>
+</body>
+</html>
+
+
+
+
+
